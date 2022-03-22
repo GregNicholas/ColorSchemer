@@ -7,10 +7,18 @@ const seedDisplay = document.getElementById("intro");
 const colorInput = document.getElementById("seed-color");
 const colorForm = document.getElementById("color-form");
 const schemeMode = document.getElementById("scheme-mode");
+const clipPopup = document.getElementById("clip-popup");
 let colorScheme = [];
 
 const clipColor = (text) => {
+  showPopup();
   navigator.clipboard.writeText(text);
+};
+
+const showPopup = () => {
+  clipPopup.style.display = "block";
+  // clipPopup.classList.add("show");
+  setTimeout(() => (clipPopup.style.display = "none"), 2000);
 };
 
 const getColorScheme = (reseed) => {
