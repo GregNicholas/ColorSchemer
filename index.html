@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Color Schemer</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <main id="main">
+      <h1 id="title">COLOR SCHEMER</h1>
+      <p id="intro">
+        Use the color picker square to change the seed color, select a scheme
+        type, and submit to get your color scheme. Colors will be labeled with
+        approximate color name and hex code. 
+        Click a hex code to copy to clipboard. </br>
+        Seed color: #FFFFFF White
+      </p>
+
+      <form id="color-form">
+        <label for="seed-color">
+          <input
+            type="color"
+            id="seed-color"
+            name="seed-color"
+            value="#ffffff"
+          />
+        </label>
+        <label for="scheme-mode">
+          <select name="scheme-mode" id="scheme-mode">
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome-dark</option>
+            <option value="monochrome-light">Monochrome-light</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic-complement</option>
+            <option value="triad">Triad</option>
+          </select>
+        </label>
+        <button type="submit" id="color-button">Get Color Scheme</button>
+      </form>
+      <section id="color-scheme">
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+      </section>
+      <section id="color-names">
+        <div class="color-name"></div>
+        <div class="color-name"></div>
+        <div class="color-name"></div>
+        <div class="color-name"></div>
+        <div class="color-name"></div>
+      </section>
+    </main>
+    
+    <script src="src/index.js"></script>
+  </body>
+</html>

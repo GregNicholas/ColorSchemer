@@ -1,0 +1,130 @@
+body {
+  font-family: sans-serif;
+  color: #1f293a;
+}
+
+#main {
+  margin: 0 auto;
+  max-height: 550px;
+  max-width: 550px;
+  min-width: 350px;
+}
+
+#title {
+  margin: 0.5rem;
+  font-size: 2.5rem;
+  color: magenta;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    #ef5350,
+    #f48fb1,
+    #7e57c2,
+    #2196f3,
+    #26c6da,
+    #43a047,
+    #eeff41,
+    #f9a825,
+    #ff5722
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#intro {
+  width: fit-content;
+  max-width: 550px;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px lightgray;
+}
+
+form {
+  padding: 1rem 0.8rem;
+  display: grid;
+  grid-template-columns: 51px minmax(150px, auto) 135px;
+  gap: 0.5rem;
+}
+
+#seed-color,
+#scheme-mode,
+#color-button {
+  height: 2.5rem;
+  border-radius: 5px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  cursor: pointer;
+}
+
+#scheme-mode {
+  width: 100%;
+}
+
+#color-scheme,
+#color-names {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+#color-scheme {
+  height: 415px;
+}
+
+#color-names {
+  height: 45px;
+  align-items: center;
+}
+
+.color,
+.color-name {
+  width: 415px;
+}
+
+.color {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 0.2rem 0.1rem;
+  color: black;
+}
+
+.color-name {
+  cursor: copy;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
