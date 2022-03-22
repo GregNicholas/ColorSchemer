@@ -62,6 +62,10 @@ form {
   cursor: pointer;
 }
 
+#color-button:active {
+  transform: scale(0.98);
+}
+
 #scheme-mode {
   width: 100%;
 }
@@ -80,6 +84,22 @@ form {
 #color-names {
   height: 45px;
   align-items: center;
+}
+
+#color1 {
+  background: #808080;
+}
+#color2 {
+  background: #9a9898;
+}
+#color3 {
+  background: #b4b1b1;
+}
+#color4 {
+  background: #cecaca;
+}
+#color5 {
+  background: #e7e4e4;
 }
 
 .color,

@@ -1,4 +1,4 @@
-import "./styles.css";
+//import "./styles.css";
 //url -> https://www.thecolorapi.com/scheme?hex={hex}&mode={mode}&count=5
 
 const colorBlocks = [...document.getElementsByClassName("color")];
@@ -25,7 +25,7 @@ const getColorScheme = (reseed) => {
   const chosenColor = colorInput.value.slice(1); //remove #
   const mode = schemeMode.value;
   const url = `https://www.thecolorapi.com/scheme?hex=${chosenColor}&mode=${mode}&count=5`;
-
+  console.log(chosenColor);
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
@@ -41,16 +41,14 @@ const getColorScheme = (reseed) => {
         colorNames[i].addEventListener("click", () => clipColor(hexValue));
         i++;
       }
-      if (reseed) {
-        seedDisplay.textContent = `Seed color: ${colorInput.value.toUpperCase()} ${seedName}`;
-        seedDisplay.style.boxShadow = `1px 1px 10px ${colorInput.value}`;
-      }
+      seedDisplay.textContent = `Seed color: ${colorInput.value.toUpperCase()} ${seedName}`;
+      seedDisplay.style.boxShadow = `1px 1px 10px ${colorInput.value}`;
     });
 };
 
-getColorScheme(false);
+// getColorScheme();
 
 colorForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  getColorScheme(true);
+  getColorScheme();
 });
