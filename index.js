@@ -1,4 +1,3 @@
-//import "./styles.css";
 //url -> https://www.thecolorapi.com/scheme?hex={hex}&mode={mode}&count=5
 
 const colorBlocks = [...document.getElementsByClassName("color")];
@@ -17,7 +16,6 @@ const clipColor = (text) => {
 
 const showPopup = () => {
   clipPopup.style.display = "block";
-  // clipPopup.classList.add("show");
   setTimeout(() => (clipPopup.style.display = "none"), 2000);
 };
 
@@ -25,7 +23,6 @@ const getColorScheme = (reseed) => {
   const chosenColor = colorInput.value.slice(1); //remove #
   const mode = schemeMode.value;
   const url = `https://www.thecolorapi.com/scheme?hex=${chosenColor}&mode=${mode}&count=5`;
-  console.log(chosenColor);
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
